@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: agent-stack-mastra
+    runtime: node
+    buildCommand: bash scripts/build.sh
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20.9.0
+    autoDeploy: true
